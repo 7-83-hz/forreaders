@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: local('IBM Plex Mono');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #f5f3ee;
+  margin: 0;
+  padding: 0;
+}
+
+.pr-page {
+  --bg: #f5f3ee;
+  --ink-faint: #c9c5ba;
+  --c1: #ff6b6b;
+  --c2: #4ecdc4;
+  --c3: #ffd93d;
+  --c4: #a78bfa;
+  --c5: #6bcf7f;
+  --c6: #ff9f5a;
+
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg);
+  overflow: hidden;
+  font-family: 'IBM Plex Mono', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pr-stage {
+  position: absolute;
+  inset: 0;
+  perspective: 900px;
+  transition: opacity 0.4s ease;
+}
+
+.pr-shape-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.pr-shape {
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: pr-spin linear infinite, pr-pop 0.6s ease-out;
+  will-change: transform;
+  filter: saturate(1.1);
+}
+
+.pr-shape .face {
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+}
+
+@keyframes pr-spin {
+  from { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  to   { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+@keyframes pr-pop {
+  0%   { opacity: 0; transform: scale(0.2); }
+  60%  { opacity: 1; transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.pr-shape.leaving {
+  animation: pr-spin linear infinite, pr-leave 0.5s ease-in forwards;
+}
+
+@keyframes pr-leave {
+  to { opacity: 0; transform: scale(0.1); }
+}
+
+.pr-textbox {
+  position: relative;
+  z-index: 10;
+  min-width: 320px;
+  min-height: 140px;
+  width: min(560px, 80%);
+  padding: 40px 48px;
+  text-align: center;
+  color: var(--ink-faint);
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+}
+
+.pr-closed {
+  position: absolute;
+  z-index: 20;
+  text-align: center;
+  color: var(--ink-faint);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.pr-closed .pr-glyph {
+  font-size: 28px;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pr-shape { animation: none !important; }
+}

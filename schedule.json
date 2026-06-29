@@ -1,0 +1,11 @@
+{
+  "timezone_note": "All times below are UTC, written as YYYY-MM-DDTHH:MM:SSZ. Convert your local time to UTC before adding a window. See README.md for a plain-language walkthrough with examples. This schedule is currently set to always-open (start in the past, end far in the future). Replace the single window below with real dates whenever you want to restrict it.",
+  "windows": [
+    {
+      "label": "Always open - replace with real window(s) when ready",
+      "start": "2020-01-01T00:00:00Z",
+      "end": "2099-01-01T00:00:00Z"
+    }
+  ]
+}
+
