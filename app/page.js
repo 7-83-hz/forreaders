@@ -161,10 +161,16 @@ export default function PresencePage() {
       </div>
 
       <div className="pr-textbox" style={{ opacity: showRoom ? 1 : 0 }}>
-       Right now, we are all reading these words at the same time, one after the other. We’re speaking them aloud, paying attention to how it feels to say each word. The words here are made out of letters which are made out of edges. There is something that stops me from becoming you, the same thing stops each letter from becoming the page. 
+       Right now, we are all reading these words at the same time, one after the other. 
+         We’re speaking them aloud, paying attention to how it feels to say each word. 
+         The words here are made out of letters which are made out of edges. There is something that stops me from becoming you, the same thing stops each letter from becoming the page. 
 How many shapes are there? Each shape is a person. What would it be like if we were all in the same room? Could we all fit? If we all held hands in a circle, how big would it be? 
-If we were all speaking the same words in the same room, the edges that separate you and I would get blurrier, our voices would become one and we wouldn’t be able to tell one another apart. If we all spoke at the same time for long enough our breathing will begin to sync up. When we start breathing at the same time, our hearts follow. Our bodies become mirrors of one another, breath and hearts synching up. Edges of letters are memorable and emotional spaces, much like the space that separates the written word from the spoken one. In cultures prioritizing orality, senses are sharper. One can be rolled up in a ball beneath the belly of a ram and still hear a dinner bell ring. 
-When we write, we leave a piece of ourselves on the page, when we read the writing of someone else, that piece gets picked up and swallowed. When we read that writing aloud, that piece reanimates itself in the voice. Listening to another begins where the forms of letters end on the page, and ends when one can hear the voice of someone else in their own. 
+If we were all speaking the same words in the same room, the edges that separate you and I would get blurrier, our voices would become one and we wouldn’t be able to tell one another apart. 
+         If we all spoke at the same time for long enough our breathing will begin to sync up. When we start breathing at the same time, our hearts follow.
+         Our bodies become mirrors of one another, breath and hearts synching up. Edges of letters are memorable and emotional spaces, much like the space that separates the written word from the spoken one. 
+         In cultures prioritizing orality, senses are sharper. One can be rolled up in a ball beneath the belly of a ram and still hear a dinner bell ring. 
+When we write, we leave a piece of ourselves on the page, when we read the writing of someone else, that piece gets picked up and swallowed. When we read that writing aloud, that piece reanimates itself in the voice. 
+         Listening to another begins where the forms of letters end on the page, and ends when one can hear the voice of someone else in their own. 
       </div>
 
       <div className="pr-closed" style={{ opacity: showClosed ? 1 : 0 }}>
